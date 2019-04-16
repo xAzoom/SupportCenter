@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Login Page</h1>
+    {{ form_start(form) }}
+        Email: {{ form_widget(form._email) }}<br>
+        Password: {{ form_widget(form._password) }}<br>
+        <button type="submit">Login</button>
+    {{ form_end(form) }}
+{% endblock %}

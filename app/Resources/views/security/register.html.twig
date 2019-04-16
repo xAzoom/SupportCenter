@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Registration</h1>
+    {{ form_start(form) }}
+        Email: {{ form_widget(form.email) }}<br>
+        Password: {{ form_widget(form.password.first) }}<br>
+        Confirm password: {{ form_widget(form.password.second) }}<br>
+        <button type="submit">Register</button>
+    {{ form_end(form) }}
+
+{% endblock %}
