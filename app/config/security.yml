@@ -4,8 +4,8 @@ security:
 
   # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
   providers:
-    in_memory:
-      memory: ~
+    users:
+      id: AppBundle\Security\UserProvider
 
   encoders:
     AppBundle\Entity\User:
@@ -19,6 +19,14 @@ security:
 
     main:
       anonymous: ~
+
+      guard:
+        authenticators:
+          - AppBundle\Security\LoginFormAuthenticator
+
+      logout:
+        path: /logout
+
       # activate different ways to authenticate
 
       # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate

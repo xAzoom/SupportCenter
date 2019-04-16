@@ -12,6 +12,21 @@ class User implements UserInterface
 
     private $roles = [];
 
+    public static function fromArray(array $data) {
+        $self = new self();
+        $self->email = $data['email'];
+        $self->password = $data['password'];
+
+        $roles = json_decode($data['roles'], true);
+        if (json_last_error() === JSON_ERROR_NONE) {
+            $self->roles = $roles;
+        } else {
+            $self->roles = $data['roles'];
+        }
+
+        return $self;
+    }
+
     /**
      * @return string
      */
