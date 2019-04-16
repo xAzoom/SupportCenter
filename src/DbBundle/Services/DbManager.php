@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: azoom
- * Date: 14.04.19
- * Time: 23:22
- */
 
 namespace DbBundle\Services;
 
@@ -43,5 +37,21 @@ class DbManager implements IDbManager
     public function findBy($table, array $columns, array $by)
     {
         return $this->select($table, $columns, $by)->fetchAll();
+    }
+
+    public function insert($table, array $values)
+    {
+        $qB = $this->dbConnection->createQueryBuilder();
+        $qB->insert($table);
+
+        $columns = [];
+        $i = 0;
+        foreach ($values as $column => $value) {
+            $columns[$column] = '?';
+            $qB->setParameter($i++, $value);
+        }
+        $qB->values($columns);
+
+        $qB->execute();
     }
 }
