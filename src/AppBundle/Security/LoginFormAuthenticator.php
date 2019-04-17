@@ -1,10 +1,7 @@
 <?php
 
-
 namespace AppBundle\Security;
 
-
-use AppBundle\Entity\User;
 use AppBundle\Form\LoginForm;
 use DbBundle\Services\IDbManager;
 use Symfony\Component\Form\FormFactoryInterface;

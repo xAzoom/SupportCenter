@@ -25,7 +25,7 @@ class UniqueLoginValidator extends ConstraintValidator
         }
 
         // TODO add method emailIsUnique
-        if(!empty($this->dbManager->findOneBy('users', ["id"], ["email" => "value"]))) {
+        if(!empty($this->dbManager->findOneBy('users', ['id'], ['email' => 'value']))) {
             $this->context->addViolation($constraint->message);
         }
     }

@@ -22,7 +22,7 @@ class DbManager implements IDbManager
         $qB->select($columns)->from($table);
 
         foreach ($by as $key => $value) {
-            $qB->andWhere($key." = :".$key);
+            $qB->andWhere($key.' = :'.$key);
             $qB->setParameter($key, $value);
         }
 

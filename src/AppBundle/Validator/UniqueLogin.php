@@ -2,7 +2,6 @@
 
 namespace AppBundle\Validator;
 
-
 use Symfony\Component\Validator\Constraint;
 
 class UniqueLogin extends Constraint

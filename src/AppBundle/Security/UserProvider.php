@@ -1,8 +1,6 @@
 <?php
 
-
 namespace AppBundle\Security;
-
 
 use AppBundle\Entity\User;
 use DbBundle\Services\IDbManager;

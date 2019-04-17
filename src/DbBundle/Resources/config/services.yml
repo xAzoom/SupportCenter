@@ -1,6 +1,6 @@
 services:
   db.manager:
     class: DbBundle\Services\DbManager
-    arguments: ["@database_connection"]
+    arguments: ['@database_connection']
 
-  DbBundle\Services\IDbManager: "@db.manager"
+  DbBundle\Services\IDbManager: '@db.manager'

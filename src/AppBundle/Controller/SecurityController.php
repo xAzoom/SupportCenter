@@ -19,7 +19,7 @@ class SecurityController extends Controller
         $form = $this->createForm(LoginForm::class);
 
         return $this->render('security/login.html.twig', [
-            "form" => $form->createView(),
+            'form' => $form->createView(),
         ]);
     }
 
@@ -37,7 +37,7 @@ class SecurityController extends Controller
         }
 
         return $this->render('security/register.html.twig', [
-            "form" => $form->createView(),
+            'form' => $form->createView(),
         ]);
     }
 }
