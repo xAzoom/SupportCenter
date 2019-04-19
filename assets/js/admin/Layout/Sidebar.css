@@ -1,0 +1,115 @@
+.sidebar-left {
+    z-index: 1;
+    position: fixed;
+
+    top: 56px;
+    width: 250px;
+    height: 100%;
+    overflow-y: hidden;
+    background: #222222;
+}
+
+img.avatar {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 50%;
+    width: 100px;
+    padding-left: 10px;
+}
+
+.user-panel {
+    text-align: center;
+
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+    background: #087E8B;
+}
+
+ul.nav-main {
+    font-size: 18px;
+}
+
+ul.nav-main li a {
+    padding-top: 15px;
+    padding-left: 25px;
+    color: #C1BFB5;
+    text-decoration: none;
+}
+
+ul.nav-main li a:visited {
+    background: #222222;
+}
+
+ul.nav-main li a:hover {
+    background: #444444;
+}
+
+ul.nav-main li.nav-parent > a {
+    background: #222222;
+}
+
+ul.nav-main li.nav-parent a:hover {
+    background: #444444;
+}
+
+ul.nav-main li.nav-parent > a:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    font-weight: 900;
+    color: #abb4be;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px 25px;
+}
+
+ul.nav-main li.nav-parent.nav-expanded > a:after {
+    content: "\f106";
+}
+
+ul.nav-main > li.nav-expanded > a {
+    background: #444444;
+}
+
+ul.nav-main li .nav-children {
+    display: none;
+}
+
+ul.nav-main li.nav-parent.nav-expanded > ul.nav-children {
+    display: block;
+}
+
+ul.nav-main li .nav-children {
+    list-style-type: none;
+    background: #393939;
+    padding-left: 0;
+}
+
+ul.nav-main li .nav-children li a {
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 22px;
+    display: block;
+}
+
+ul.nav-main li .nav-children li a:hover {
+    /*background: #393939;*/
+    background: #555555;
+
+}
+
+.nav-icon {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #sidebar-left {
+        width: 0;
+    }
+
+    #sidebar-left.expanded {
+        width: 100vw;
+    }
+}
