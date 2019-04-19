@@ -16,4 +16,7 @@
 /vendor/
 /web/bundles/
 
-.idea/
+/.idea/
+
+/node_modules/
+/web/build/
