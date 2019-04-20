@@ -1,0 +1,38 @@
+.header {
+    background: #141301;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h3 {
+    padding-bottom: 16px;
+    padding-left: 20px;
+    color: #EFF7FF;
+    font-style: oblique;
+}
+
+.breadcrumb {
+    float: right;
+    border-radius: 0;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+    }
+}
