@@ -100,6 +100,10 @@ class DbManager implements IDbManager
                 return false;
             }
 
+            if (!ColumnTypes::isValidColumnType($column[1])) {
+                return false;
+            }
+
             if (isset($column[2]) && !is_array($column[2])) {
                 return false;
             }
