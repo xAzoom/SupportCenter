@@ -5,7 +5,8 @@ namespace AppBundle\Service;
 class InputTypeConfig
 {
     const TEXT = 'text';
-    const NUMBER = 'number';
+    const INTEGER = 'integer';
+    const FLOAT = 'float';
     const SELECT = 'select';
 
     const TEXT_TYPE = 'text';
@@ -23,7 +24,13 @@ class InputTypeConfig
                 'regex' => self::REGEXP_TYPE,
             ],
 
-            self::NUMBER => [
+            self::INTEGER => [
+                'minValue' => self::NUMBER_TYPE,
+                'maxValue' => self::NUMBER_TYPE,
+                'step' => self::NUMBER_TYPE,
+            ],
+
+            self::FLOAT => [
                 'minValue' => self::NUMBER_TYPE,
                 'maxValue' => self::NUMBER_TYPE,
                 'step' => self::NUMBER_TYPE,
